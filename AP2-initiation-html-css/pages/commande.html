@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/Global.css" />
+    <title>COURS SIO WEB | HTML</title>
+  </head>
+<body>
+ <header>
+      <nav>
+        <div class="logo">Logo</div>
+        <div class="menu" id="menu">
+          <a href="../index.html">Accueil</a>
+          <a href="html.html">HTML</a>
+          <a href="css.html">CSS</a>
+          <a href="bobo.html">JavaScript</a>
+          <a href="php.html">PHP</a>
+          <a href="kotlin.html">Kotlin</a>
+          <a href="python.html">Python</a>
+          <a href="sql.html">SQL</a>
+          <a href="angular.html">Angular</a>
+          <a href="git.html">Git</a>
+          <a href="github.html">GitHub</a>
+          <a href="linux.html">Linux</a>
+          <a href="commande.html">Ligne de commande Linux</a>
+        </div>
+        <div
+          class="burger"
+          id="burger"
+          aria-label="Menu"
+          aria-expanded="false"
+          role="button"
+          tabindex="0"
+        >
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </nav>
+    </header>
+    <p><section class="commandes-linux">
+    <h2>Les commandes Linux de base</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Commande</th>
+                <th>Description</th>
+                <th>Exemple</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td><code>pwd</code></td>
+                <td>Affiche le répertoire courant</td>
+                <td><code>pwd</code></td>
+            </tr>
+
+            <tr>
+                <td><code>ls</code></td>
+                <td>Affiche les fichiers et dossiers</td>
+                <td><code>ls -l</code></td>
+            </tr>
+
+            <tr>
+                <td><code>cd</code></td>
+                <td>Permet de changer de répertoire</td>
+                <td><code>cd Documents</code></td>
+            </tr>
+
+            <tr>
+                <td><code>mkdir</code></td>
+                <td>Crée un nouveau dossier</td>
+                <td><code>mkdir projet</code></td>
+            </tr>
+
+            <tr>
+                <td><code>touch</code></td>
+                <td>Crée un nouveau fichier</td>
+                <td><code>touch index.html</code></td>
+            </tr>
+
+            <tr>
+                <td><code>cp</code></td>
+                <td>Copie un fichier ou un dossier</td>
+                <td><code>cp fichier.txt sauvegarde.txt</code></td>
+            </tr>
+
+            <tr>
+                <td><code>mv</code></td>
+                <td>Déplace ou renomme un fichier</td>
+                <td><code>mv ancien.txt nouveau.txt</code></td>
+            </tr>
+
+            <tr>
+                <td><code>rm</code></td>
+                <td>Supprime un fichier</td>
+                <td><code>rm fichier.txt</code></td>
+            </tr>
+
+            <tr>
+                <td><code>rmdir</code></td>
+                <td>Supprime un dossier vide</td>
+                <td><code>rmdir dossier</code></td>
+            </tr>
+
+            <tr>
+                <td><code>cat</code></td>
+                <td>Affiche le contenu d'un fichier</td>
+                <td><code>cat fichier.txt</code></td>
+            </tr>
+
+            <tr>
+                <td><code>clear</code></td>
+                <td>Efface le contenu du terminal</td>
+                <td><code>clear</code></td>
+            </tr>
+
+            <tr>
+                <td><code>whoami</code></td>
+                <td>Affiche l'utilisateur actuel</td>
+                <td><code>whoami</code></td>
+            </tr>
+
+            <tr>
+                <td><code>date</code></td>
+                <td>Affiche la date et l'heure</td>
+                <td><code>date</code></td>
+            </tr>
+
+            <tr>
+                <td><code>man</code></td>
+                <td>Affiche le manuel d'une commande</td>
+                <td><code>man ls</code></td>
+            </tr>
+
+            <tr>
+                <td><code>sudo</code></td>
+                <td>Exécute une commande avec les droits administrateur</td>
+                <td><code>sudo apt update</code></td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+</p>
+</body>
+</html>
+<!-- Formulaire : regroupe tous les champs à envoyer ensemble. action = adresse qui recevra les données (ici vide, pour l'exercice) method = manière d'envoyer les données (post = dans le corps de la requête) --> <form action="#" method="post"> <!-- Étiquette (texte visible) associée au champ nom. for = id du champ auquel elle se rattache : cliquer sur le texte active le champ --> <label for="nom">Nom :</label> <!-- Champ pour saisir le nom de l'utilisateur. type="text" : champ de texte sur une seule ligne id="nom" : identifiant unique, relié au label name="nom" : nom de la donnée envoyée au serveur required : le champ est obligatoire, le formulaire ne part pas s'il est vide --> <input type="text" id="nom" name="nom" required /> <br /><br /> <!-- br : saut de ligne pour aérer le formulaire --> <!-- Étiquette associée au champ email --> <label for="email">Email :</label> <!-- Champ pour saisir l'adresse email. type="email" : le navigateur vérifie qu'il y a un format d'email valide (xxx@yyy.zz) id / name : identifiant (lien avec le label) et nom de la donnée envoyée required : champ obligatoire --> <input type="email" id="email" name="email" required /> <br /><br /> <!-- Étiquette associée à la zone de commentaires --> <label for="commentaires">Commentaires :</label> <br /> <!-- Zone de texte multiligne pour écrire un commentaire. id / name : identifiant et nom de la donnée envoyée rows : nombre de lignes visibles cols : nombre de colonnes (largeur) visibles placeholder : texte d'aide affiché tant que la zone est vide --> <textarea id="commentaires" name="commentaires" rows="5" cols="40" placeholder="Écrivez votre message ici..."></textarea> <br /><br /> <!-- Bouton qui envoie le formulaire. type="submit" : au clic, déclenche la soumission du formulaire --> <button type="submit">Envoyer</button> </form>

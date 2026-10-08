@@ -1,0 +1,372 @@
+/* Styles globaux */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: rgb(246, 248, 249);
+}
+head {
+  background-color: #982323;
+  color: #eadada;
+}
+/* En-tête */
+/* nav */
+/* Barre de navigation */
+nav {
+  background-color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+/* Logo ou titre */
+.logo {
+  color: white;
+  font-size: 1.2em;
+}
+
+/* Menu */
+.menu {
+  display: flex;
+  gap: 15px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Menu burger */
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+}
+
+/* Styles mobiles */
+@media (max-width: 1000px) {
+  /* cacher le menu horizontal */
+  .menu {
+    display: none;
+    flex-direction: column;
+    background-color: #444;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 200px;
+    padding: 10px;
+    z-index: 1;
+  }
+
+  /* afficher le menu quand ouvert */
+  .menu.show {
+    display: flex;
+  }
+
+  /* Afficher le burger */
+  .burger {
+    display: flex;
+  }
+}
+/* Styles pour le contenu principal dans le*/
+main {
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+/* 
+    Les articles sont initialement déplacés vers la gauche et transparents.
+    La transition permet un effet de fade-in et de glissement lors de l'ajout de la classe fade-in.
+    will-change optimise les performances pour les propriétés transform et opacity.
+*/
+article {
+  /* fait entrer les articles par la gauche */
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.8s;
+  will-change: transform, opacity;
+}
+
+article.fade-in {
+  transform: translateX(0);
+  opacity: 1;
+}
+article {
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 600px;
+}
+/* class pour le conteneur flexible (parent) pour les articles */
+.d-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* wrap articles : permet de les aligner en colonnes sur les petits écrans. class combiné avec .d-flex */
+.wrap {
+  flex-wrap: wrap;
+}
+/* class pour les boutons */
+button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+button a {
+  color: white;
+  text-decoration: none;
+}
+/* couleur des icônes */
+.htmlColor {
+  color: #e44d26;
+}
+.cssColor {
+  color: #2965f1;
+}
+.jsColor {
+  color: #f7df1e;
+}
+.phpColor {
+  color: #8993be;
+}
+.kotlinColor {
+  color: #0095d5;
+}
+.pythonColor {
+  color: #3776ab;
+}
+.gitColor {
+  color: #f05032;
+}
+.githubColor {
+  color: #181717;
+}
+.sqlColor {
+  color: #e34f26;
+}
+.linuxColor {
+  color: #fcc624;
+}
+.terminalColor {
+  color: #4d4d4d;
+}
+.angularColor {
+  color: #dd0031;
+}
+/* class pour les tailles d'icônes */
+.icon {
+  font-size: 3rem;
+}
+.icon-small {
+  font-size: 16px;
+}
+.icon-large {
+  font-size: 32px;
+}
+/* class pour les logos */
+.kotlinLogo {
+  width: 3rem;
+  height: auto;
+}
+/* class pour le pied de page */
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #f1f1f1;
+  bottom: 0;
+  width: 100%;
+}
+<section class="commandes-linux">
+    <h2>Les commandes Linux de base</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Commande</th>
+                <th>Description</th>
+                <th>Exemple</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td><code>pwd</code></td>
+                <td>Affiche le répertoire courant</td>
+                <td><code>pwd</code></td>
+            </tr>
+
+            <tr>
+                <td><code>ls</code></td>
+                <td>Affiche les fichiers et dossiers</td>
+                <td><code>ls -l</code></td>
+            </tr>
+
+            <tr>
+                <td><code>cd</code></td>
+                <td>Permet de changer de répertoire</td>
+                <td><code>cd Documents</code></td>
+            </tr>
+
+            <tr>
+                <td><code>mkdir</code></td>
+                <td>Crée un nouveau dossier</td>
+                <td><code>mkdir projet</code></td>
+            </tr>
+
+            <tr>
+                <td><code>touch</code></td>
+                <td>Crée un nouveau fichier</td>
+                <td><code>touch index.html</code></td>
+            </tr>
+
+            <tr>
+                <td><code>cp</code></td>
+                <td>Copie un fichier ou un dossier</td>
+                <td><code>cp fichier.txt sauvegarde.txt</code></td>
+            </tr>
+
+            <tr>
+                <td><code>mv</code></td>
+                <td>Déplace ou renomme un fichier</td>
+                <td><code>mv ancien.txt nouveau.txt</code></td>
+            </tr>
+
+            <tr>
+                <td><code>rm</code></td>
+                <td>Supprime un fichier</td>
+                <td><code>rm fichier.txt</code></td>
+            </tr>
+
+            <tr>
+                <td><code>rmdir</code></td>
+                <td>Supprime un dossier vide</td>
+                <td><code>rmdir dossier</code></td>
+            </tr>
+
+            <tr>
+                <td><code>cat</code></td>
+                <td>Affiche le contenu d'un fichier</td>
+                <td><code>cat fichier.txt</code></td>
+            </tr>
+
+            <tr>
+                <td><code>clear</code></td>
+                <td>Efface le contenu du terminal</td>
+                <td><code>clear</code></td>
+            </tr>
+
+            <tr>
+                <td><code>whoami</code></td>
+                <td>Affiche l'utilisateur actuel</td>
+                <td><code>whoami</code></td>
+            </tr>
+
+            <tr>
+                <td><code>date</code></td>
+                <td>Affiche la date et l'heure</td>
+                <td><code>date</code></td>
+            </tr>
+
+            <tr>
+                <td><code>man</code></td>
+                <td>Affiche le manuel d'une commande</td>
+                <td><code>man ls</code></td>
+            </tr>
+
+            <tr>
+                <td><code>sudo</code></td>
+                <td>Exécute une commande avec les droits administrateur</td>
+                <td><code>sudo apt update</code></td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+2. CSS — pour rendre le tableau joli
+.commandes-linux {
+    width: 90%;
+    max-width: 1100px;
+    margin: 50px auto;
+    font-family: Arial, sans-serif;
+}
+
+.commandes-linux h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 30px;
+}
+
+/* Tableau */
+.commandes-linux table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* En-tête */
+.commandes-linux thead {
+    background-color: #222;
+    color: white;
+}
+
+.commandes-linux th {
+    padding: 15px;
+    text-align: left;
+    font-size: 17px;
+}
+
+/* Cellules */
+.commandes-linux td {
+    padding: 14px 15px;
+    border-bottom: 1px solid #ddd;
+    color: #333;
+}
+
+/* Une ligne sur deux */
+.commandes-linux tbody tr:nth-child(even) {
+    background-color: #f5f5f5;
+}
+
+/* Effet au survol */
+.commandes-linux tbody tr:hover {
+    background-color: #e8f4ff;
+}
+
+/* Affichage des commandes */
+.commandes-linux code {
+    background-color: #fafaf8;
+    color: #050505;
+    padding: 5px 8px;
+    border-radius: 4px;
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+}
+
+/* Responsive pour téléphone */
+@media (max-width: 700px) {
+    .commandes-linux {
+        width: 95%;
+        overflow-x: auto;
+    }
+
+    .commandes-linux table {
+        min-width: 700px;
+    }
+}

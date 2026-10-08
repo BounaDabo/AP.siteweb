@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/Global.css" />
+    <title>COURS SIO WEB | HTML</title>
+  </head>
+<body>
+    <!-- En-tête de la page -->
+    <header>
+      <nav>
+        <div class="logo">Logo</div>
+        <div class="menu" id="menu">
+          <a href="../index.html">Accueil</a>
+          <a href="html.html">HTML</a>
+          <a href="css.html">CSS</a>
+          <a href="bobo.html">JavaScript</a>
+          <a href="php.html">PHP</a>
+          <a href="kotlin.html">Kotlin</a>
+          <a href="python.html">Python</a>
+          <a href="sql.html">SQL</a>
+          <a href="angular.html">Angular</a>
+          <a href="git.html">Git</a>
+          <a href="github.html">GitHub</a>
+          <a href="linux.html">Linux</a>
+          <a href="commande.html">Ligne de commande Linux</a>
+        </div>
+        <div
+          class="burger"
+          id="burger"
+          aria-label="Menu"
+          aria-expanded="false"
+          role="button"
+          tabindex="0"
+        >
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <h1>Introduction à SQL</h1>
+    <p>SQL, ou Structured Query Language, est un langage utilisé pour communiquer avec les bases de données relationnelles. Une base de données permet de stocker et d'organiser de grandes quantités d'informations afin qu'elles puissent être facilement consultées et modifiées.
+
+Grâce à SQL, un développeur peut effectuer différentes opérations sur les données. Il peut par exemple rechercher des informations, ajouter de nouveaux enregistrements, modifier des données existantes ou supprimer certaines informations. Ces opérations sont fondamentales dans de nombreuses applications informatiques.
+
+Imaginons une boutique en ligne : les informations concernant les utilisateurs, les produits, les commandes et les paiements doivent être stockées quelque part. Une base de données permet de conserver ces informations, tandis que SQL permet à l'application de communiquer avec cette base de données.
+
+SQL permet également d'effectuer des recherches complexes en utilisant différentes conditions, tris et regroupements. Il est possible de relier plusieurs tables entre elles afin de récupérer des informations provenant de différentes parties d'une base de données.
+
+La maîtrise de SQL est donc très importante pour les développeurs qui travaillent avec des applications utilisant des données. Elle est également utile pour les administrateurs de bases de données et les professionnels de l'analyse de données.</p>
+</body>
+</html>
+<!-- Formulaire : regroupe tous les champs à envoyer ensemble. action = adresse qui recevra les données (ici vide, pour l'exercice) method = manière d'envoyer les données (post = dans le corps de la requête) --> <form action="#" method="post"> <!-- Étiquette (texte visible) associée au champ nom. for = id du champ auquel elle se rattache : cliquer sur le texte active le champ --> <label for="nom">Nom :</label> <!-- Champ pour saisir le nom de l'utilisateur. type="text" : champ de texte sur une seule ligne id="nom" : identifiant unique, relié au label name="nom" : nom de la donnée envoyée au serveur required : le champ est obligatoire, le formulaire ne part pas s'il est vide --> <input type="text" id="nom" name="nom" required /> <br /><br /> <!-- br : saut de ligne pour aérer le formulaire --> <!-- Étiquette associée au champ email --> <label for="email">Email :</label> <!-- Champ pour saisir l'adresse email. type="email" : le navigateur vérifie qu'il y a un format d'email valide (xxx@yyy.zz) id / name : identifiant (lien avec le label) et nom de la donnée envoyée required : champ obligatoire --> <input type="email" id="email" name="email" required /> <br /><br /> <!-- Étiquette associée à la zone de commentaires --> <label for="commentaires">Commentaires :</label> <br /> <!-- Zone de texte multiligne pour écrire un commentaire. id / name : identifiant et nom de la donnée envoyée rows : nombre de lignes visibles cols : nombre de colonnes (largeur) visibles placeholder : texte d'aide affiché tant que la zone est vide --> <textarea id="commentaires" name="commentaires" rows="5" cols="40" placeholder="Écrivez votre message ici..."></textarea> <br /><br /> <!-- Bouton qui envoie le formulaire. type="submit" : au clic, déclenche la soumission du formulaire --> <button type="submit">Envoyer</button> </form>
